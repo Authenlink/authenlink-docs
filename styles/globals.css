@@ -312,3 +312,19 @@ span.katex-html {
     height: 0;
   }
 }
+
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6 {
+  color: rgb(255 255 255 / 0.9);
+}
+
+/* Si tu utilises prose (typography) */
+.dark .prose h1,
+.dark .prose h2,
+.dark .prose h3 {
+  color: rgb(255 255 255 / 0.9);
+}

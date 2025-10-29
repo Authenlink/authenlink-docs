@@ -6,12 +6,16 @@ export const Navigations = [
     href: `/docs${PageRoutes[0].href}`,
   },
   {
-    title: "Rubix",
-    href: "https://rubixstudios.com.au",
+    title: "AuthenLink",
+    href: "https://www.authenlink.com",
     external: true,
   },
 ]
 
 export const GitHubLink = {
-  href: "https://github.com/rubixvi/rubix-documents",
+  href: "https://github.com/Authenlink",
+}
+
+export const GitHubLinkRepo = {
+  href: "https://github.com/Authenlink/authenlink-docs",
 }

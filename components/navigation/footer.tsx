@@ -16,22 +16,21 @@ export function Footer() {
         >
           {Settings.name}
         </Link>
-        .
       </p>
       {Settings.branding !== false && (
         <div className="hidden items-center md:block">
           <Link
             className="font-semibold"
-            href="https://rubixstudios.com.au"
-            title="Rubix Studios"
-            aria-label="Rubix Studios"
+            href="https://www.authenlink.com"
+            title="AuthenLink"
+            aria-label="AuthenLink"
             target="_blank"
           >
             <Image
-              src="/logo.svg"
-              alt="Rubix Studios logo"
-              title="Rubix Studios logo"
-              aria-label="Rubix Studios logo"
+              src="/authenlink.png"
+              alt="AuthenLink logo"
+              title="AuthenLink logo"
+              aria-label="AuthenLink logo"
               priority={false}
               width={30}
               height={30}

@@ -123,13 +123,13 @@ export default function Search() {
             <LuSearch className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-neutral-500 dark:text-neutral-400" />
             <Input
               className="bg-background h-9 w-full rounded-md border pr-4 pl-10 text-sm shadow md:w-full"
-              placeholder="Search"
+              placeholder="Recherche"
               type="search"
             />
           </div>
         </DialogTrigger>
         <DialogContent className="top-[45%] max-w-xs p-0 sm:top-[38%] sm:max-w-lg">
-          <DialogTitle className="sr-only">Search</DialogTitle>
+          <DialogTitle className="sr-only">Recherche</DialogTitle>
           <DialogHeader>
             <input
               value={searchedInput}
@@ -141,18 +141,18 @@ export default function Search() {
           </DialogHeader>
           {searchedInput.length > 0 && searchedInput.length < 3 && (
             <p className="text-warning mx-auto mt-2 text-sm">
-              Please enter at least 3 characters.
+              Entrez au moins 3 caractères s&apos;il vous plait.
             </p>
           )}
           {isLoading ? (
             <p className="text-muted-foreground mx-auto mt-2 text-sm">
-              Searching...
+              Recherche...
             </p>
           ) : (
             filteredResults.length === 0 &&
             searchedInput.length >= 3 && (
               <p className="text-muted-foreground mx-auto mt-2 text-sm">
-                No results found for{" "}
+                Aucun résultat trouvé pour{" "}
                 <span className="text-primary">{`"${searchedInput}"`}</span>
               </p>
             )

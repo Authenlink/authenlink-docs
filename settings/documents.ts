@@ -2,21 +2,16 @@ import { Paths } from "@/lib/pageroutes"
 
 export const Documents: Paths[] = [
   {
-    heading: "Introduction",
-    title: "Basic Setup",
-    href: "/basic-setup",
+    title: "AuthenLink",
+    href: "/authenlink",
     items: [
       {
-        title: "Installation",
-        href: "/installation",
+        title: "Ma Vision",
+        href: "/vision",
       },
       {
-        title: "Setup",
-        href: "/setup",
-      },
-      {
-        title: "Changelog",
-        href: "/changelog",
+        title: "Nos Services",
+        href: "/nos-services",
       },
     ],
   },
@@ -24,76 +19,52 @@ export const Documents: Paths[] = [
     spacer: true,
   },
   {
-    title: "Navigation",
-    href: "/navigation",
-    heading: "Documents",
+    title: "Services",
+    href: "/services",
+    heading: "Services",
   },
   {
-    title: "Structure",
-    href: "/structure",
+    title: "Agents IA",
+    href: "/agent-ia",
     items: [
       {
-        title: "Deep",
-        href: "/deep",
-        items: [
-          {
-            title: "Deeper",
-            href: "/deeper",
-            items: [
-              {
-                title: "Even deeper",
-                href: "/even-deeper",
-              },
-            ],
-          },
-        ],
+        title: "Agents n8n",
+        href: "/n8n",
+      },
+      {
+        title: "Agents Python & React",
+        href: "/python",
+      },
+      {
+        title: "Systèmes RAG",
+        href: "/rag",
+      },
+      {
+        title: "Fine-tuning",
+        href: "/fine-tuning",
       },
     ],
   },
   {
-    spacer: true,
+    title: "Automatisation Marketing",
+    href: "/market-automation",
   },
   {
-    title: "Markdown",
-    href: "/markdown",
-    heading: "Components",
+    title: "GEO & Visibilité IA",
+    href: "/geo",
     items: [
       {
-        title: "Cards",
-        href: "/cards",
+        title: "GEO & SEO",
+        href: "/geoseo",
       },
       {
-        title: "Diagrams",
-        href: "/diagrams",
-      },
-      {
-        title: "Filetree",
-        href: "/filetree",
-      },
-      {
-        title: "Lists",
-        href: "/lists",
-      },
-      {
-        title: "Maths",
-        href: "/maths",
-      },
-      {
-        title: "Notes",
-        href: "/notes",
-      },
-      {
-        title: "Steps",
-        href: "/steps",
-      },
-      {
-        title: "Table",
-        href: "/table",
-      },
-      {
-        title: "Tabs",
-        href: "/tabs",
+        title: "Intégrateur Web IA",
+        href: "/webia",
       },
     ],
+  },
+  {
+    title: "Data Engineering",
+    href: "/data",
   },
 ]

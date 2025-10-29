@@ -37,7 +37,7 @@ export function BackToTop(): ReactElement {
       className="text-foreground mt-6 ml-2 flex cursor-pointer items-center self-start text-sm opacity-0 transition"
     >
       <LuArrowUp className="mr-1 inline-block h-4 w-4 align-middle" />
-      <span>Scroll to top</span>
+      <span>Retourner au début</span>
     </button>
   )
 }

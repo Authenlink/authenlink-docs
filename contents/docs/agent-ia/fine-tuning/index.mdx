@@ -1,0 +1,236 @@
+---
+title: Fine-Tuning de Modèles
+description: Entraînement de modèles IA spécialisés - datasets performants, infrastructure scalable et performances supérieures aux modèles génériques.
+keywords: ["fine-tuning", "datasets", "GPU", "LoRA", "S3", "Vast.ai", "Google Colab"]
+---
+
+Le **fine-tuning** permet de spécialiser un modèle IA existant sur vos données et vos cas d'usage spécifiques.
+
+Un **petit modèle fine-tuné peut surpasser GPT-4** sur des tâches ciblées, tout en étant plus rapide, moins coûteux et déployable en privé.
+
+<Note type="success" title="Performance Supérieure">
+  Un modèle de 7B paramètres bien fine-tuné peut outperformer les derniers ChatGPT sur des tâches spécifiques tout en coûtant 10x moins cher à l'inférence.
+</Note>
+
+---
+
+## Pourquoi Fine-Tuner ?
+
+| Avantage                      | Description                                                                 |
+| ----------------------------- | --------------------------------------------------------------------------- |
+| **Performance Spécialisée**   | Surpasse les modèles génériques sur vos cas d'usage spécifiques           |
+| **Coûts Réduits**             | Modèles plus petits signifient une inférence 10x moins chère              |
+| **Vitesse Optimale**          | Réponses plus rapides avec des modèles optimisés                          |
+| **Contrôle Total**            | Déploiement privé, aucune dépendance à OpenAI ou Anthropic                |
+| **Données Sensibles**         | Vos données restent sur votre infrastructure                               |
+| **Ton et Style**              | Modèle qui parle exactement comme votre marque                             |
+
+---
+
+## Création de Datasets Performants
+
+La qualité du fine-tuning dépend à 80% de la qualité des données. Nous créons des datasets adaptés à vos besoins spécifiques.
+
+<CardGrid>
+  <Card
+    title="IA Conversationnelle Pointue"
+    description="Datasets pour chatbots spécialisés dans votre domaine avec ton, vocabulaire et expertise spécifiques."
+  />
+  <Card
+    title="Function Calling / Setter"
+    description="Entraînement pour utilisation d'outils, appels API et actions structurées avec précision maximale."
+  />
+  <Card
+    title="Assistants Métiers"
+    description="Modèles spécialisés pour juridique, médical, finance, technique avec terminologie exacte."
+  />
+  <Card
+    title="Génération Créative"
+    description="Datasets pour création de contenu avec style, format et qualité définis."
+  />
+</CardGrid>
+
+### Notre Processus de Création
+
+<Step>
+  <StepItem title="Collecte et Sourcing">
+    Extraction de vos données existantes et création de données synthétiques si nécessaire.
+  </StepItem>
+
+  <StepItem title="Nettoyage et Structuration">
+    Déduplication, normalisation et structuration au format optimal pour l'entraînement.
+  </StepItem>
+
+  <StepItem title="Annotation et Labellisation">
+    Enrichissement avec métadonnées et labels pour améliorer la qualité de l'apprentissage.
+  </StepItem>
+
+  <StepItem title="Séparation Train et Validation">
+    Division intelligente entre datasets d'entraînement (80%) et de validation (20%).
+  </StepItem>
+</Step>
+
+<Note type="note" title="Qualité avant Quantité">
+  500 exemples de haute qualité valent mieux que 10 000 exemples moyens. Nous privilégions toujours la curation et la qualité des données.
+</Note>
+
+---
+
+## Infrastructure d'Entraînement
+
+Nous adaptons l'infrastructure selon la taille du projet et le budget disponible.
+
+### Prototypage Rapide avec Google Colab
+
+Pour les **tests rapides et petits modèles**, nous utilisons Google Colab :
+
+- **Setup instantané** sans configuration serveur
+- **GPUs gratuits ou abordables** (T4, A100 disponibles)
+- **Itération rapide** pour tester différentes approches
+- **Notebooks interactifs** avec visualisation en temps réel
+
+### Infrastructure Scalable pour Production
+
+Pour les **modèles de production et gros volumes**, nous déployons des infrastructures robustes :
+
+| Composant            | Technologies                                                                |
+| -------------------- | --------------------------------------------------------------------------- |
+| **Storage**          | Buckets S3 (AWS ou OVH) pour datasets et checkpoints versionnés           |
+| **Compute**          | GPUs loués sur Vast.ai, RunPod, Lambda Labs selon besoins et budget       |
+| **Orchestration**    | Scripts Python optimisés avec logging, monitoring et checkpointing         |
+| **Training**         | LoRA, QLoRA, Full fine-tuning selon les cas d'usage                       |
+| **Evaluation**       | Métriques automatisées sur datasets de validation                          |
+
+---
+
+## Datasets d'Entraînement et Validation
+
+Nous suivons les meilleures pratiques pour garantir la qualité du fine-tuning.
+
+### Dataset d'Entraînement
+
+- **Volume optimal** entre 500 et 50K exemples selon la complexité
+- **Diversité** couvrant l'ensemble des cas d'usage et cas limites
+- **Qualité vérifiée** avec chaque exemple validé manuellement ou par IA
+- **Format structuré** en prompt-completion ou instruction-tuning
+
+### Dataset de Validation
+
+- **20% des données** séparées du training pour une mesure objective
+- **Distribution représentative** similaire au dataset d'entraînement
+- **Métriques automatisées** incluant loss, accuracy, perplexity
+- **Tests qualitatifs** avec évaluation humaine sur échantillon
+
+### Amélioration Continue
+
+<Step>
+  <StepItem title="Évaluation Post-Training">
+    Tests sur dataset de validation et cas réels pour mesurer la performance.
+  </StepItem>
+
+  <StepItem title="Analyse des Erreurs">
+    Identification des types d'erreurs et cas où le modèle échoue.
+  </StepItem>
+
+  <StepItem title="Enrichissement Dataset">
+    Ajout d'exemples ciblant les faiblesses identifiées.
+  </StepItem>
+
+  <StepItem title="Re-Training">
+    Nouvel entraînement sur dataset enrichi pour amélioration continue.
+  </StepItem>
+</Step>
+
+---
+
+## Cas d'Usage Concrets
+
+Voici des exemples de modèles que nous avons fine-tunés :
+
+| Cas d'Usage                  | Modèle Base | Dataset | Résultat                                                |
+| ---------------------------- | ----------- | ------- | ------------------------------------------------------- |
+| **Assistant Juridique**      | Mistral 7B  | 15K     | Surpasse GPT-4 sur questions légales françaises        |
+| **Agent Function Calling**   | Llama 3 8B  | 8K      | 99% de précision sur appels API vs 85% GPT-3.5         |
+| **Support Client Tech**      | Qwen 3 14B     | 12K     | Taux de résolution 92% vs 78% avec modèle générique    |
+| **Génération Contenu SEO**   | Mistral 7B  | 20K     | Ton de marque exact avec respect des guidelines SEO    |
+| **Classification Tickets**   | Llama 3 3B  | 5K      | 97% d'accuracy, inférence 50ms vs 800ms GPT-4          |
+
+<Note type="success" title="Petit Modèle, Grandes Performances">
+  Notre assistant juridique basé sur Mistral 7B répond 5x plus vite que GPT-4 avec une précision supérieure, tout en coûtant 15x moins cher.
+</Note>
+
+---
+
+## Quand Fine-Tuner un Modèle ?
+
+Le fine-tuning est pertinent dans ces situations :
+
+- **Expertise de niche** - Votre domaine nécessite un vocabulaire très spécifique
+- **Volume élevé** - Des milliers de requêtes par jour rendent le fine-tuning rentable
+- **Latence critique** - Vous avez besoin de réponses en moins de 100ms
+- **Données sensibles** - Vos données ne peuvent pas être envoyées à des APIs tierces
+- **Ton et Format** - Vous voulez un contrôle total sur le style de réponse
+- **Function calling précis** - Les modèles génériques ne sont pas assez fiables sur vos tools
+
+<Note type="warning" title="Coût vs Bénéfice">
+  Le fine-tuning nécessite un investissement initial pour la création du dataset et l'entraînement. Il devient rentable dès 10-20K requêtes par mois vs APIs GPT-4.
+</Note>
+
+---
+
+## Notre Processus
+
+<Step>
+  <StepItem title="Audit et Faisabilité">
+    Analyse de votre cas d'usage et estimation des gains potentiels du fine-tuning.
+  </StepItem>
+
+  <StepItem title="Création du Dataset">
+    Collecte, nettoyage et structuration de vos données en datasets de qualité.
+  </StepItem>
+
+  <StepItem title="Choix du Modèle et Infrastructure">
+    Sélection du modèle de base optimal et setup de l'infrastructure d'entraînement.
+  </StepItem>
+
+  <StepItem title="Entraînement et Optimisation">
+    Fine-tuning avec monitoring des métriques et ajustement des hyperparamètres.
+  </StepItem>
+
+  <StepItem title="Évaluation et Tests">
+    Validation sur dataset de test et comparaison avec modèles génériques.
+  </StepItem>
+
+  <StepItem title="Déploiement et Production">
+    Déploiement du modèle optimisé avec API et monitoring complet.
+  </StepItem>
+</Step>
+
+---
+
+## Prêt à Fine-Tuner Votre Modèle ?
+
+<CardGrid>
+  <Card
+    title="Systèmes RAG"
+    description="Combinez RAG et fine-tuning pour des performances maximales sur vos données."
+    href="/docs/agent-ia/rag"
+  />
+  <Card
+    title="Agents Python"
+    description="Intégrez vos modèles fine-tunés dans des agents Python avancés."
+    href="/docs/agent-ia/python"
+  />
+  <Card
+    title="Contactez-nous"
+    description="Discutons de votre projet de fine-tuning et évaluons la faisabilité."
+    href="https://www.authenlink.com"
+    external={true}
+  />
+</CardGrid>
+
+---
+
+<Note type="success" title="Fine-Tuning + RAG = Stack Ultime">
+  Notre recommandation : combiner un modèle fine-tuné pour le ton et le style avec un RAG pour les connaissances à jour.
+</Note>

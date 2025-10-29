@@ -1,0 +1,249 @@
+---
+title: Systèmes RAG
+description: Développement de systèmes RAG (Retrieval-Augmented Generation) avec veille continue, embeddings performants et Graph RAG.
+keywords: ["RAG", "Retrieval Augmented Generation", "embeddings", "vector database", "Graph RAG", "Python", "LangChain"]
+---
+
+Le **RAG (Retrieval-Augmented Generation)** permet à vos agents IA de répondre avec précision en utilisant **vos propres données et documents**.
+
+Au lieu de s'appuyer uniquement sur leurs connaissances générales, les modèles IA recherchent d'abord dans votre base de connaissances pour fournir des réponses **contextuelles, précises et à jour**.
+
+<Note type="success" title="Vos Données, Votre Intelligence">
+  Le RAG transforme votre documentation interne en un assistant IA qui connaît parfaitement votre entreprise, vos produits et vos processus.
+</Note>
+
+---
+
+## Notre Approche RAG
+
+Nous développons des systèmes RAG **en Python** pour des performances et une flexibilité maximales, bien supérieures aux solutions no-code.
+
+| Avantage                      | Description                                                                 |
+| ----------------------------- | --------------------------------------------------------------------------- |
+| **Performance Optimale**      | Python nous permet d'optimiser finement les embeddings et la recherche     |
+| **Ingestion Multi-Format**    | Nous traitons tous types de documents (PDF, DOCX, HTML, Markdown, etc.)   |
+| **Embeddings Performants**    | Modèles d'embeddings optimisés pour votre domaine et votre langue         |
+| **Veille Continue**           | Mise à jour automatique de votre base de connaissances                     |
+| **Mémoire Persistante**       | Le RAG sert aussi de mémoire long terme pour vos agents                    |
+| **Amélioration Continue**     | Optimisation basée sur les retours et les performances réelles             |
+
+---
+
+## Ce Que Nous Construisons
+
+### 📚 Ingestion Intelligente de Documents
+
+Nous ingérons et structurons **tous types de contenus** pour alimenter votre RAG :
+
+<CardGrid>
+  <Card
+    title="Documents Structurés"
+    description="PDF, DOCX, Excel, PowerPoint avec extraction intelligente de la structure et du contenu."
+  />
+  <Card
+    title="Contenus Web"
+    description="Pages web, articles, documentation en ligne avec nettoyage et formatage automatique."
+  />
+  <Card
+    title="Données Conversationnelles"
+    description="Emails, tickets support, chats pour enrichir votre base de connaissances."
+  />
+  <Card
+    title="Code & Technique"
+    description="Documentation technique, code source, APIs avec parsing spécialisé."
+  />
+</CardGrid>
+
+### 🎯 Embeddings Performants
+
+Nous ne nous contentons pas des embeddings génériques. Nous **optimisons pour votre cas d'usage** :
+
+- **Choix du modèle** – OpenAI, Cohere, voyage-ai, BGE selon vos besoins
+- **Fine-tuning d'embeddings** – Entraînement sur votre vocabulaire métier
+- **Multi-langue** – Embeddings optimisés pour français, anglais ou multilingue
+- **Chunking intelligent** – Découpage optimal de vos documents pour la précision
+- **Metadata enrichment** – Ajout de contexte pour améliorer la recherche
+
+<Note type="note" title="Optimisation Continue">
+  Nous analysons les performances de recherche et ajustons continuellement la stratégie d'embeddings, le chunking et les paramètres de retrieval.
+</Note>
+
+---
+
+## Veille Continue & Mise à Jour
+
+Vos données évoluent ? Votre RAG aussi.
+
+<Step>
+  <StepItem title="Monitoring des Sources">
+    Surveillance automatique de vos sources de données (docs, sites web, bases de données) pour détecter les changements.
+  </StepItem>
+
+  <StepItem title="Ingestion Automatique">
+    Dès qu'un nouveau document est détecté ou modifié, il est automatiquement traité et ajouté au RAG.
+  </StepItem>
+
+  <StepItem title="Versioning Intelligent">
+    Gestion des versions de documents pour garder l'historique et permettre le rollback si nécessaire.
+  </StepItem>
+
+  <StepItem title="Déduplication">
+    Élimination automatique des contenus dupliqués pour garder une base de connaissances propre et efficace.
+  </StepItem>
+</Step>
+
+### Mémoire Persistante
+
+Au-delà de la documentation, votre RAG devient la **mémoire long terme de vos agents** :
+
+- **Conversations passées** – Vos agents se souviennent des échanges précédents
+- **Décisions & Contexte** – Historique des actions et du contexte métier
+- **Apprentissage continu** – Les corrections et feedbacks enrichissent la base
+- **Personnalisation** – Mémoire spécifique par utilisateur ou par projet
+
+---
+
+## Graph RAG : La Prochaine Génération
+
+Le **Graph RAG** va au-delà du RAG vectoriel classique en modélisant les **relations entre concepts**.
+
+### Pourquoi le Graph RAG ?
+
+<CardGrid>
+  <Card
+    title="Relations Complexes"
+    description="Comprend les liens entre entités, concepts et documents au lieu de simplement chercher par similarité."
+  />
+  <Card
+    title="Inférences Logiques"
+    description="Capable de déduire des informations en suivant les relations dans le graphe de connaissances."
+  />
+  <Card
+    title="Réponses Multi-Sources"
+    description="Agrège intelligemment des informations provenant de documents reliés pour des réponses complètes."
+  />
+</CardGrid>
+
+### Technologies Graph RAG
+
+Nous implémentons des Graph RAG avec :
+
+| Technologie          | Usage                                                                       |
+| -------------------- | --------------------------------------------------------------------------- |
+| **Neo4j**            | Base de données graphe robuste pour modéliser des relations complexes     |
+| **LightRAG**         | Framework léger avec graphes de connaissances intégrés                     |
+| **Knowledge Graphs** | Construction automatique de graphes à partir de vos documents              |
+| **Cypher Queries**   | Requêtes graphe avancées pour retrieval précis                             |
+
+<Note type="success" title="Précision +40%">
+  Les Graph RAG offrent jusqu'à 40% de précision supplémentaire sur des domaines de connaissances complexes avec de nombreuses relations entre concepts.
+</Note>
+
+---
+
+## Architecture Technique
+
+Notre stack RAG est conçue pour la performance et la scalabilité :
+
+### Backend
+
+- **Python + LangChain/LlamaIndex** – Orchestration RAG avancée
+- **FastAPI** – APIs performantes pour interroger le RAG
+- **Celery + Redis** – Traitement asynchrone de documents volumineux
+
+### Vector Databases
+
+- **Pinecone** – Cloud vector DB scalable
+- **Qdrant** – Open-source, self-hosted, performant
+- **ChromaDB** – Léger, parfait pour prototypes et petits volumes
+
+### Graph Databases
+
+- **Neo4j** – Leader des bases graphes pour Graph RAG
+- **LightRAG** – Framework léger avec graphes intégrés
+
+### Processing
+
+- **Unstructured.io** – Parsing avancé de documents complexes
+- **LlamaParse** – Extraction intelligente de PDFs et documents
+- **Custom Parsers** – Parsers Python sur mesure pour formats spécifiques
+
+---
+
+## Cas d'Usage Concrets
+
+| Client Type              | Solution RAG                                                                |
+| ------------------------ | --------------------------------------------------------------------------- |
+| **Support Client**       | RAG sur base de connaissances produit, 95% de réponses automatiques        |
+| **Cabinet Juridique**    | Graph RAG avec Neo4j sur 15 000 documents légaux, recherche contextuelle   |
+| **E-commerce**           | RAG sur catalogue produits + retours clients pour recommandations          |
+| **Entreprise Tech**      | RAG sur documentation technique interne, onboarding automatisé             |
+| **Consulting**           | RAG avec mémoire client pour contextualisation des interactions            |
+
+---
+
+## Quand Implémenter un RAG ?
+
+Le RAG est idéal dans ces situations :
+
+✅ **Documentation volumineuse** – Vous avez des centaines ou milliers de documents  
+✅ **Connaissances spécifiques** – Votre domaine nécessite une expertise non disponible dans les modèles génériques  
+✅ **Mise à jour fréquente** – Vos informations changent régulièrement  
+✅ **Précision critique** – Les réponses doivent être exactes avec sources traçables  
+✅ **Support client** – Vous voulez automatiser les réponses aux questions courantes  
+✅ **Mémoire contextuelle** – Vos agents doivent se souvenir du contexte long terme
+
+---
+
+## Notre Processus RAG
+
+<Step>
+  <StepItem title="Audit de Contenus">
+    Inventaire de vos sources de données, évaluation de la qualité et identification des formats.
+  </StepItem>
+
+  <StepItem title="Architecture & Stack">
+    Choix de la vector database, des modèles d'embeddings et de la stratégie de chunking optimale.
+  </StepItem>
+
+  <StepItem title="Ingestion & Indexation">
+    Traitement de vos documents, création des embeddings et indexation dans la base vectorielle.
+  </StepItem>
+
+  <StepItem title="Optimisation Retrieval">
+    Tests de recherche, ajustement des paramètres et amélioration de la précision.
+  </StepItem>
+
+  <StepItem title="Veille & Maintenance">
+    Mise en place de la veille continue et des processus de mise à jour automatique.
+  </StepItem>
+</Step>
+
+---
+
+## Prêt à Créer Votre RAG ?
+
+<CardGrid>
+  <Card
+    title="Fine-Tuning"
+    description="Pour des performances ultimes, combinez RAG et fine-tuning de modèles."
+    href="/docs/agent-ia/fine-tuning"
+  />
+  <Card
+    title="Agents Python"
+    description="Intégrez votre RAG dans des agents Python avancés avec interfaces React."
+    href="/docs/agent-ia/python"
+  />
+  <Card
+    title="Contactez-nous"
+    description="Discutons de votre projet RAG et de votre base de connaissances."
+    href="https://www.authenlink.com"
+    external={true}
+  />
+</CardGrid>
+
+---
+
+<Note type="success" title="RAG + Graph = Puissance Maximale">
+  Notre recommandation : commencer avec un RAG vectoriel classique, puis évoluer vers Graph RAG si votre domaine nécessite la compréhension de relations complexes.
+</Note>

@@ -19,9 +19,11 @@ export default function Error({
     <section className="flex min-h-[99vh] flex-col items-start gap-3 px-2 py-8">
       <div>
         <h2 className="text-5xl font-bold">Oops!</h2>
-        <p className="text-muted-foreground">Something went wrong!</p>
+        <p className="text-muted-foreground">
+          Il semblerait qu&apos;il y ait eu une erreure !
+        </p>
       </div>
-      <Button onClick={() => reset()}>Try again</Button>
+      <Button onClick={() => reset()}>Reéssayer</Button>
     </section>
   )
 }

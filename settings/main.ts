@@ -4,7 +4,7 @@ export const siteicon = "/authenlink.png"
 export const gtm = "GTM-XXXXXXX"
 export const gtmconnected = true
 
-export const sitename = "Docs"
+export const sitename = ""
 export const description =
   "This comprehensive documentation for our agency AuthenLink where you'll find several informations regarding IA applied to marketing and operations."
 export const keywords = [

@@ -6,6 +6,11 @@ export const Navigations = [
     href: `/docs${PageRoutes[0].href}`,
   },
   {
+    title: "Blog",
+    href: "https://blog.authenlink.com",
+    external: true,
+  },
+  {
     title: "AuthenLink",
     href: "https://www.authenlink.com",
     external: true,
